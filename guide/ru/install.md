@@ -19,7 +19,7 @@ oExamlpe
 return [
 	'modules' => [
 		// ...
-		'design-pattern' => 'yii2lab\design-pattern\frontend\Module',
+		'design-pattern' => 'yii2lab\DesignPattern\frontend\Module',
 		// ...
 	],
 ];
@@ -31,7 +31,7 @@ return [
 return [
 	'modules' => [
 		// ...
-		'design-pattern' => 'yii2lab\design-pattern\backend\Module',
+		'design-pattern' => 'yii2lab\DesignPattern\backend\Module',
 		// ...
 	],
 ];
@@ -43,7 +43,7 @@ return [
 return [
 	'modules' => [
 		// ...
-		'design-pattern' => 'yii2lab\design-pattern\api\Module',
+		'DesignPattern' => 'yii2lab\DesignPattern\api\Module',
 		// ...
 		'components' => [
             'urlManager' => [
@@ -64,7 +64,7 @@ return [
 return [
 	'modules' => [
 		// ...
-		'design-pattern' => 'yii2lab\design-pattern\console\Module',
+		'design-pattern' => 'yii2lab\DesignPattern\console\Module',
 		// ...
 	],
 ];
@@ -76,7 +76,7 @@ return [
 return [
 	'components' => [
 		// ...
-		'design-pattern' => 'yii2lab\design-pattern\domain\Domain',
+		'DesignPattern' => 'yii2lab\DesignPattern\domain\Domain',
 		// ...
 	],
 ];
