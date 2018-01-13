@@ -1,10 +1,10 @@
 <?php
 
-namespace yii2lab\designPattern\helpers;
+namespace yii2lab\designPattern\command\helpers;
 
 use yii\web\ServerErrorHttpException;
+use yii2lab\designPattern\command\interfaces\CommandInterface;
 use yii2lab\helpers\Helper;
-use yii2lab\designPattern\interfaces\CommandInterface;
 use yii2mod\helpers\ArrayHelper;
 
 class CommandHelper {

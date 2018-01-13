@@ -1,12 +1,12 @@
 <?php
 
-namespace yii2lab\designPattern\helpers;
+namespace yii2lab\designPattern\filter\helpers;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 use yii\web\ServerErrorHttpException;
+use yii2lab\designPattern\filter\interfaces\FilterInterface;
 use yii2lab\helpers\Helper;
-use yii2lab\designPattern\interfaces\FilterInterface;
 
 class FilterHelper {
 	

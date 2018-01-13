@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2lab\designPattern\interfaces;
+namespace yii2lab\designPattern\command\interfaces;
 
 interface CommandInterface {
 	
