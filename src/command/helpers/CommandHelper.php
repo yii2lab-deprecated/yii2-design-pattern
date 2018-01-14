@@ -22,6 +22,9 @@ class CommandHelper {
 			return null;
 		}
 		$object = self::create($config);
+		if(method_exists($object, 'isEnabled') && !$object->isEnabled()) {
+			return null;
+		}
 		$result = $object->run();
 		return [
 			'object' => $object,

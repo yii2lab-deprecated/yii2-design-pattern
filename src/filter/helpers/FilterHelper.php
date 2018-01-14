@@ -21,10 +21,13 @@ class FilterHelper {
 	public static function run($config, $data) {
 		$config = Helper::isEnabledComponent($config);
 		if(!$config) {
-			return null;
+			return $data;
 		}
-		$filterInstance = self::create($config);
-		$data = $filterInstance->run($data);
+		$object = self::create($config);
+		if(method_exists($object, 'isEnabled') && !$object->isEnabled()) {
+			return $data;
+		}
+		$data = $object->run($data);
 		return $data;
 	}
 	
