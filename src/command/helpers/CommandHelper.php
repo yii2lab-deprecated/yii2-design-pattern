@@ -10,25 +10,25 @@ use yii2mod\helpers\ArrayHelper;
 class CommandHelper {
 	
 	/**
-	 * @param      $config
+	 * @param      $definition
 	 *
 	 * @return mixed
 	 * @throws ServerErrorHttpException
 	 * @throws \yii\base\InvalidConfigException
 	 */
-	public static function run($config) {
-		$config = Helper::isEnabledComponent($config);
-		if(!$config) {
+	public static function run($definition) {
+		$definition = Helper::isEnabledComponent($definition);
+		if(!$definition) {
 			return null;
 		}
-		$object = self::create($config);
+		$object = self::create($definition);
 		if(method_exists($object, 'isEnabled') && !$object->isEnabled()) {
 			return null;
 		}
 		$result = $object->run();
 		return [
 			'object' => $object,
-			'config' => $config,
+			'config' => $definition,
 			'result' => $result,
 		];
 	}
@@ -56,15 +56,15 @@ class CommandHelper {
 	}
 	
 	/**
-	 * @param      $config
+	 * @param      $definition
 	 *
 	 * @return CommandInterface
 	 * @throws ServerErrorHttpException
 	 * @throws \yii\base\InvalidConfigException
 	 */
-	public static function create($config) {
+	public static function create($definition) {
 		/** @var CommandInterface $object */
-		$object = Helper::createObject($config, [], CommandInterface::class);
+		$object = Helper::createObject($definition, [], CommandInterface::class);
 		return $object;
 	}
 	

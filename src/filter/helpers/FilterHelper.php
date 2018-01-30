@@ -11,19 +11,19 @@ use yii2lab\helpers\Helper;
 class FilterHelper {
 	
 	/**
-	 * @param $config
+	 * @param $definition
 	 * @param $data
 	 *
 	 * @return mixed
 	 * @throws ServerErrorHttpException
 	 * @throws InvalidConfigException
 	 */
-	public static function run($config, $data) {
-		$config = Helper::isEnabledComponent($config);
-		if(!$config) {
+	public static function run($definition, $data) {
+		$definition = Helper::isEnabledComponent($definition);
+		if(!$definition) {
 			return $data;
 		}
-		$object = self::create($config);
+		$object = self::create($definition);
 		if(method_exists($object, 'isEnabled') && !$object->isEnabled()) {
 			return $data;
 		}
@@ -54,15 +54,15 @@ class FilterHelper {
 	}
 	
 	/**
-	 * @param      $config
+	 * @param      $definition
 	 *
 	 * @return FilterInterface
 	 * @throws ServerErrorHttpException
 	 * @throws InvalidConfigException
 	 */
-	public static function create($config) {
+	public static function create($definition) {
 		/** @var FilterInterface $object */
-		$object = Helper::createObject($config, [], FilterInterface::class);
+		$object = Helper::createObject($definition, [], FilterInterface::class);
 		return $object;
 	}
 	
