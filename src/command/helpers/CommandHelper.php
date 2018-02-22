@@ -4,6 +4,7 @@ namespace yii2lab\designPattern\command\helpers;
 
 use yii\web\ServerErrorHttpException;
 use yii2lab\designPattern\command\interfaces\CommandInterface;
+use yii2lab\helpers\ClassHelper;
 use yii2lab\helpers\Helper;
 use yii2mod\helpers\ArrayHelper;
 
@@ -64,7 +65,7 @@ class CommandHelper {
 	 */
 	public static function create($definition) {
 		/** @var CommandInterface $object */
-		$object = Helper::createObject($definition, [], CommandInterface::class);
+		$object = ClassHelper::createObject($definition, [], CommandInterface::class);
 		return $object;
 	}
 	

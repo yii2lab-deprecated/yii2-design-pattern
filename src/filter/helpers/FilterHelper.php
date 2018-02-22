@@ -6,6 +6,7 @@ use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 use yii\web\ServerErrorHttpException;
 use yii2lab\designPattern\filter\interfaces\FilterInterface;
+use yii2lab\helpers\ClassHelper;
 use yii2lab\helpers\Helper;
 
 class FilterHelper {
@@ -62,7 +63,7 @@ class FilterHelper {
 	 */
 	public static function create($definition) {
 		/** @var FilterInterface $object */
-		$object = Helper::createObject($definition, [], FilterInterface::class);
+		$object = ClassHelper::createObject($definition, [], FilterInterface::class);
 		return $object;
 	}
 	
