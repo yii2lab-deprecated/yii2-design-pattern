@@ -9,6 +9,13 @@ use yii2lab\designPattern\filter\interfaces\FilterInterface;
 use yii2lab\helpers\ClassHelper;
 use yii2lab\helpers\Helper;
 
+/**
+ * Class FilterHelper
+ *
+ * @package yii2lab\designPattern\filter\helpers
+ *
+ * @deprecated use yii2lab\designPattern\scenario\ScenarioHelper
+ */
 class FilterHelper {
 	
 	/**
