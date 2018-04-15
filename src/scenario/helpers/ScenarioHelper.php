@@ -49,7 +49,7 @@ class ScenarioHelper {
 	 * @throws InvalidConfigException
 	 * @throws ServerErrorHttpException
 	 */
-	public static function runAll(Collection $filterCollection, $data) {
+	public static function runAll(Collection $filterCollection, $data = null) {
 		
 		if(empty($filterCollection)) {
 			return $data;
