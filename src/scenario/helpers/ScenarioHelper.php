@@ -26,7 +26,7 @@ class ScenarioHelper {
 	 * @throws InvalidConfigException
 	 * @throws ServerErrorHttpException
 	 */
-	public static function run($definition, $data) {
+	public static function run($definition, $data = null) {
 		$definition = Helper::isEnabledComponent($definition);
 		if(!$definition) {
 			return $data;
