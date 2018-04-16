@@ -8,6 +8,13 @@ use yii2lab\helpers\ClassHelper;
 use yii2lab\helpers\Helper;
 use yii2mod\helpers\ArrayHelper;
 
+/**
+ * Class CommandHelper
+ *
+ * @package yii2lab\designPattern\command\helpers
+ *
+ * @deprecated
+ */
 class CommandHelper {
 	
 	/**
