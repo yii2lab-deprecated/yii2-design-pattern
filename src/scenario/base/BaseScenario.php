@@ -2,7 +2,9 @@
 
 namespace yii2lab\designPattern\scenario\base;
 
-abstract class BaseScenario {
+use yii\base\BaseObject;
+
+abstract class BaseScenario extends BaseObject {
 	
 	private $data;
 	public $isEnabled = true;
