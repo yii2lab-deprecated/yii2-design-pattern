@@ -9,9 +9,6 @@ abstract class BaseScenario extends BaseObject {
 	private $data;
 	public $isEnabled = true;
 	
-	/**
-	 * @return void
-	 */
 	abstract public function run();
 	
 	public function isEnabled() {
