@@ -6,7 +6,7 @@ use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 use yii\web\ServerErrorHttpException;
 use yii2lab\designPattern\filter\interfaces\FilterInterface;
-use yii2lab\helpers\ClassHelper;
+use yii2lab\extension\common\helpers\ClassHelper;
 use yii2lab\extension\common\helpers\Helper;
 
 /**
